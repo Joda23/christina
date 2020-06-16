@@ -7,7 +7,8 @@ class Post(models.Model):
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     text = models.TextField()
-    distance_run = models.DecimalField(max_digits=4, decimal_places=2, default=[0,00])
+    distance_run = models.DecimalField(max_digits=4, decimal_places=2, default=0.00)
+    performance_satisfaction = models.IntegerField([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
 
