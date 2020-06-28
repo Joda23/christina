@@ -16,11 +16,21 @@ class Post(models.Model):
         (9, '9'),
         (10, '10'),
     )
+    CATEGORIES = (
+        ('-','-'),
+        ('Allgemeine Tipps und Tricks','Allgemeine Tipps und Tricks'),
+        ('Ernährungsbericht','Ernährungsbericht'),
+        ('Ausrüstungsbericht','Ausrüstungsbericht'),
+        ('Trainingsfortschritt','Trainingsfortschritt'),
+        ('Motivationstipps','Motivationstipps'),
+        ('Laufgruppentrainingseinheit','Laufgruppentrainingseinheit'),
+    )
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
     text = models.TextField()
     distance_run = models.DecimalField(max_digits=5, decimal_places=3, default=0.000)
     performance_satisfaction = models.IntegerField(choices=LEVEL_CHOICES, default=1)
+    kategorie = models.CharField(choices=CATEGORIES, default=1, max_length=200)
     created_date = models.DateTimeField(default=timezone.now)
     published_date = models.DateTimeField(blank=True, null=True)
 
