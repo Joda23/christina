@@ -3,10 +3,14 @@
                     {% block content%}
                     <form method="get" action=''>
                     <input type="text" name="q" placeholder='Suche nach Kategorien'id="id_q" value="{{ query }}" /> 
-                    <select name="kategorie">
-                          {% for category in categories %}
-                            <option value="{{CATEGORIES.id}}">{{CATEGORIES.name}}</option>
-                          {% endfor %}  
+                    <select name="kategorie" id="kategorie">
+                        <option value="">--Bitte wähle eine passende Kategorie aus--</option>
+                        <option value="Allgemeine Tipps und Tricks">Allgemeine Tipps und Tricks</option>
+                        <option value="Ernährungsbericht">Ernährungsbericht</option>
+                        <option value="Ausrüstungsbericht">Ausrüstungsbericht</option>
+                        <option value="Trainingsfortschritt">Trainingsfortschritt</option>
+                        <option value="Motivationstipps">Motivationstipps</option>
+                        <option value="Laufgruppentrainingseinheit">Laufgruppentrainingseinheit</option>
                     </select>
                     <input type="submit" value="Suche" /></p>
                     </form>  
