@@ -18,12 +18,12 @@ class Post(models.Model):
     )
     CATEGORIES = (
         ('-','-'),
-        ('Allgemeine Tipps und Tricks','Allgemeine Tipps und Tricks'),
-        ('Ernährungsbericht','Ernährungsbericht'),
-        ('Ausrüstungsbericht','Ausrüstungsbericht'),
-        ('Trainingsfortschritt','Trainingsfortschritt'),
-        ('Motivationstipps','Motivationstipps'),
-        ('Laufgruppentrainingseinheit','Laufgruppentrainingseinheit'),
+        ('ATT','Allgemeine Tipps und Tricks'),
+        ('EB','Ernährungsbericht'),
+        ('AB','Ausrüstungsbericht'),
+        ('TF','Trainingsfortschritt'),
+        ('MT','Motivationstipps'),
+        ('LGT','Laufgruppentrainingseinheit'),
     )
     author = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=200)
