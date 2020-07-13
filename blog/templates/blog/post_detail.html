@@ -13,7 +13,7 @@
         <h2>{{ post.title }}</h2>
         <p>Autor: {{ post.author }}</p>
         <p>Gelaufene km: {{ post.distance_run }} || Zufriedenheit mit meiner Leistung {{ post.performance_satisfaction }}/10</p>
-        <p>Kategorie: {{post.kategorie}}</p>
+        <p>Kategorie: {{ post.kategorie }}</p>
         <p>{{ post.text|linebreaksbr }}</p>
     </div>
 {% endblock %}
