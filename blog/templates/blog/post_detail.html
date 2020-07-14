@@ -17,7 +17,7 @@
         <p>Kategorie: {{ post.kategorie }}</p>
         <p>{{ post.text|linebreaksbr }}</p>
         {% if post.cover %}
-        <img src="{{ post.cover.url}}" alt="{{ post.title }}" class="post-image" width="700" height="500">
+        <img src="{{ post.cover.url}}" alt="{{ post.title }}" class="post-image" style="max-width:100%;height:auto;">
         {% endif %}
     </div>
 {% endblock %}
