@@ -13,19 +13,24 @@
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     </head>
     <body>
-        <div class="page-header">
-            {% if user.is_authenticated %}
-                <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glyphicon-plus"></span></a>
-            {% endif %}
-            <h1><a href="/">RUN WITH ME</a></h1>
-        </div>
-        <div class="content container">
-            <div class="row">
-                <div class="col-md-8">
-                    {% block content %}
-                    {% endblock %}
+        <div class="container">
+            <body>
+                <div class="page-header">
+                    {% if user.is_authenticated %}
+                        <a href="{% url 'post_new' %}" class="top-menu"><span class="glyphicon glypicon-plus"></span></a>
+                    {% endif %}
+                    <h1><a href="/">RUN WITH ME</a></h1>
                 </div>
-            </div>
+                    <div class="content container">
+                        <div class="row">
+                            <div class="col-md-8">
+                            {% block content %}
+                            {% endblock %}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </body>
         </div>
     </body>
 </html>
