@@ -15,7 +15,7 @@ from django.core.files.storage import FileSystemStorage
 # blog/post_list.html ist ein Template
 def post_list(request):
     category = request.GET.get('kategorie')
-    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by("published_date")
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by("-published_date")
     if category:
         posts = posts.filter(kategorie=category)
     return render(request, "blog/post_list.html", {"posts": posts})
